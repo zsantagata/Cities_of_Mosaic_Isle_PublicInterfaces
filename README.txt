@@ -1,0 +1,3 @@
+This repository is a collection of interfaces for a city building game (with monsters) in development called Cities of Mosaic Isle.  These interfaces are provided as a reference for potential modders.  The game is still in development and these interfaces will almost certainly change.
+
+By the time the game is released this will have a license.  It's currently useful to nobody so all rights reserved is fine for now.  On game release it'll have the same license as whatever I decide for the open-source core data of the game.  That repo is here: (LINK)
