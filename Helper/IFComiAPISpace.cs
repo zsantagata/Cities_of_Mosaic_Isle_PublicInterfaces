@@ -20,8 +20,6 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
         //unsure of why a script may need to access this but it won't hurt anything
         public IFModdableDifficulty getModdableDifficulty();
 
-        //UI-related functions:
-        public IFBuilding getBuildingWhichIsSelected();
         //an alert is a message at the top of the screen with a corresponding message, color, and place to focus the player's attention
         //if inPop, inBuilding, inCommunity, or inDelegation To Center On is non-null, those will be the focus first (in order)
         //else if the locationX and Y are both not -1, a location will be centered on

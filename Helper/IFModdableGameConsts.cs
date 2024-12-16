@@ -71,6 +71,10 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
         public double getLocalMapMinViewZoom() ;
         public double getLocalMapPixelsToMove() ;
         public double getLocalMapZoomFactor() ;
+        public double getDiploMapMinViewZoom();
+        public double getDiploMapMaxViewZoom();
+        public double getDiploMapPixelsToMove();
+        public double getDiploMapZoomFactor();
         public double getDelegationVelocityBase();
         public double getEconStrengthMax();
         public double getMilStrengthMax();
@@ -86,7 +90,6 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
         public Int64 getCalendarYearOffset();
         public Int64 getCalendarPopAgeOffset();
         public double getClusteringRadiusPopsPlacedOnMap();
-        public double getDiploMapPixelsToMove();
 
         //display thresholds: LM means low/medium threshold.  MH means medium/high threshold
         //ratio thresholds are all between 0.0d and 1.0d inclusive
