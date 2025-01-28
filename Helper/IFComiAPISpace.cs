@@ -210,6 +210,9 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
             Int64 inEffectCBImpact, Dictionary<string, int> inEffectOtherImpacts);
 
         //calculations passthroughs:
+        public void shuffleList<T>(List<T> inList); //this function randomly rearranges the order of the list.  USER BEWARE: this changes inList itself so if you needed the original order you need to keep a deep copy
+        public T getOneRandomItemFromList<T>(List<T> inList); //this function randomly returns one element from within the list.  Better to use this than shuffleList if you need only one (or a small number, allowing repeats, of) element(s) from a list.  If the list is empty this returns the default of T, which is usually zero/null string/null reference/similar sort of things to those.
+        public T getOneRandomItemFromList<T>(ReadOnlyCollection<T> inList); //this function randomly returns one element from within the list.  Better to use this than shuffleList if you need only one (or a small number, allowing repeats, of) element(s) from a list.  If the list is empty this returns the default of T, which is usually zero/null string/null reference/similar sort of things to those.
         public bool calcProb(double inProb); //input between 0.0d and 1.0d inclusive
         public bool calcProb(int inNum, int inDenom); //inNum non-negative, inDenom positive
         public bool calcProb(Int64 inNum, Int64 inDenom);

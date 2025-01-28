@@ -22,10 +22,6 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
 
         public void changeDisplayNameTo(string inNewDisplayName);
 
-        //TODO certain buildings should have dedications or other kind of text enterable
-        public string getEnteredText();
-        public void setEnteredText(string inEnteredText);
-
         public IFBuildingKind getBuildingKind();
         public bool isHousing();
         public bool isWorkplace();

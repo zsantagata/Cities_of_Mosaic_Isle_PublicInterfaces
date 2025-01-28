@@ -60,7 +60,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
         public Int64 getMapBaseParcelMaxWidth() ;
         public Int64 getMapDoodadMaxWidth() ;
         public Int64 getMapResourceParcelMaxWidth() ;
-        public Int64 getSandboxPopCount() ;
+        public Int64 getSandboxPopCount() ; //TODO remove this
         public Int64 getMapGenAttemptsBeforeHalt() ;
 
         public double getDesolationMaxTileValue() ;

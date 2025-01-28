@@ -5,6 +5,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
     public interface IFHistoricalOccurrenceCollection
     {
         public void add(IFHistoricalOccurrence inToAdd);
+        //getAllHistoryBetweenDates includes occurrences on inEarlierDate, but not those on inLaterDate
         public ReadOnlyCollection<IFHistoricalOccurrence> getAllHistoryBetweenDates(Int64 inEarlierDate, Int64 inLaterDate);
         public void forgetOccurrencesBeforeDateWithConditions(Int64 inDate,
             bool inRememberOccurrencesWithNoUnknownActorsOrTargets = false,

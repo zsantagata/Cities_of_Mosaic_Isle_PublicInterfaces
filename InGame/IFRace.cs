@@ -184,9 +184,6 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
 
         public ReadOnlyCollection<string> getSSIDs();
 
-        public ReadOnlyCollection<string> getCommunityNameList();
-        public ReadOnlyCollection<string> getPopNameList();
-
         //these are multiplicative factors on top of gameConsts.cPopVelocity and gameConsts.cDelegationVelocityBase
         public double getLandSpeed(); //note that pops who cannot breathe overland will not path onto it, or travel in delegations across it, but this must still be positive for pops who *somehow* find themselves on the local map in inappropriate terrain
         public double getWaterSpeed(); //note that pops who cannot breathe underwater will not path onto it, or travel in delegations across it, but this must still be positive for pops who *somehow* find themselves on the local map in inappropriate terrain
