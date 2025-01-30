@@ -102,6 +102,20 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
             ,cAlways = 2 //all pops assigned this building as a mustering point will always be told to muster here
         }
 
+        //only one of these can be chosen for a buildingkind
+        public const int cRadiusVisualFeedbackFlagsMask = 0x7F;
+        public enum eRadiusVisualFeedbackFlags
+        {
+             cNone = 0x0
+            ,cAllOtherBuildings = 0x1
+            ,cWorkplaces = 0x2
+            ,cHousing = 0x4
+            ,cMusteringPoints = 0x8
+            ,cDistribution = 0x10
+            ,cAppropriateResourceParcels = 0x20
+            ,cCustomScript = 0x40
+        }
+
 
         public bool hasTag(string inTag);
         public ReadOnlyCollection<string> getTagList();
@@ -139,6 +153,8 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
         public double getBeautyRadius();
         public ReadOnlyCollection<IFBuildingKind> getBeautySynergyBuildings();
         public bool hasBeautySynergyWith(IFBuildingKind inBuildingKind);
+
+        public eRadiusVisualFeedbackFlags getRadiusVisualFeedbackFlag();
 
         //housing accessors:
         public bool isHousing();
