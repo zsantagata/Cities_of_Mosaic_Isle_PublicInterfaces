@@ -113,7 +113,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
 
         //functions related to saveable object fetching:
         public int getTotalCountOfSO(string inType);
-        public List<UInt64> getUIDsOfAllSO(string inType);
+        public ReadOnlyCollection<UInt64> getUIDsOfAllSO(string inType);
         public IFUID getSO(string inType, int inUID); //returns null if it does not exist
         public IFUID getSO(string inType, Int64 inUID); //returns null if it does not exist
         public IFUID getSO(string inType, UInt32 inUID); //returns null if it does not exist
@@ -137,7 +137,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
             IFRace inRace,
             IFCommunity inCommunityLoyalty,
             /*basics*/
-        string inName = "", //skipping will pull from the race pool of names
+            string inName = "", //skipping will pull from the race pool of names
             Int64 inDOB = Int64.MinValue, //skipping will calculate a date matching racial life expectancy
             double inSoldierSkill = double.MinValue,
             IFPop.ePopSex inSex = IFPop.ePopSex.cUnisexNone, //skipping will either make the pop UnisexNone or a valid sex randomly chosen of the sexes.  Note that if input is invalid for the race, it will be rerolled.
@@ -173,7 +173,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.Helper
             IFBuildingKind inBuildingKind,
             Int64 inMapLocationX, //building location can't change after creation, so if this building is going to be placed on a map, make sure these values are correct
             Int64 inMapLocationY, //building location can't change after creation, so if this building is going to be placed on a map, make sure these values are correct
-            IFResource inConstructionResource,
+            ReadOnlyCollection<Tuple<IFResource, double>> inConstructionResource,
             string inName = ""
             );
 

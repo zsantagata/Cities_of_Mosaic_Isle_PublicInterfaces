@@ -21,8 +21,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
         //D) getHeight() and getWidth() will return positive integers
         //E) getPopDaysToBuild() will return a positive integer
         //F) getBaseDurability() will return a positive integer
-        //G) getResourcesToBuild() will not return null, but may be an empty list.  An IFResource will appear at most once in the list.
-        //H) getResourceCountToBuild() will return -1 if the input resource is not in getResourcesToBuild().  Otherwise it will return the non-negative value associated with that resource in getResourcesToBuild().  This means that a return value of 0 indicates that the resource is "valid" but none of it is consumed when constructing a building.
+        //G) getAllResourceCombinationsToBuild() will not return null, but may be an empty list.  An IFResource will appear at most once in each inner list.  The values will be non-negative.  Only one inner list at most will have all values sum to 0.
         //I) getDurabilityMultForConstructionResource() will return a positive, non-infinite, non-NaN number.
         //J) getBeautySynergyBuildings() will not return null, but may be an empty list.  An IFBuildingKind will appear at most once in the list.
         //K) hasBeautySynergyWith(IFBuildingKind inBuildingKind) will return the same value as getBeautySynergyBuildings().Contains(inBuildingKind)
@@ -144,8 +143,7 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
         public Int64 getPopDaysToBuild();
         public Int64 getBaseDurability();
 
-        public ReadOnlyCollection<Tuple<IFResource, Int64>> getResourcesToBuild();
-        public Int64 getResourceCountToBuild(IFResource inResource);
+        public ReadOnlyCollection<ReadOnlyCollection<Tuple<IFResource, double>>> getAllResourceCombinationsToBuild();
         public double getOutputMultForConstructionResource(IFResource inResource);
         public double getDurabilityMultForConstructionResource(IFResource inResource);
 

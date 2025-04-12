@@ -38,8 +38,8 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
         public Int64 getMaxBuildingDurability();
         public void setMaxBuildingDurability(Int64 inNewMBD);
 
-        public IFResource getMadeOfResource();
-        public void setMadeOfResource(IFResource inResource);
+        public ReadOnlyCollection<Tuple<IFResource, double>> getConstructionResources();
+        public void setConstructionResources(ReadOnlyCollection<Tuple<IFResource, double>> inResources);
 
         public Int64 getCalendarDayBuilt();
         public IFCalendar.calendarDate getCalendarDateBuilt();
@@ -65,6 +65,9 @@ namespace Cities_of_Mosaic_Isle_PublicInterfaces.InGame
         public double calcServiceQualityForIndustry(UInt64 inIndustryMOID);
         public double calcServiceQualityForIndustry(IFIndustry inIndustry); //the difference between these functions and the above is that the above is raw values of individual buildings, while this is the total calculation of the service quality offered by the industry as a whole
         public void addServiceQuality(IFBuilding inBuilding, double inServiceQuality); //if the building is already stored in getServiceQualities, this overrides its service quality
+
+        public double calcBuildingDurabilityMultFromConstructionResources();
+        public double calcBuildingOutputMultFromConstructionResources();
 
         //these will return null if the building is not a workplace/not housing:
         public IFWorkplaceComponent getWorkplaceComponent();
